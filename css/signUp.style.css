@@ -82,13 +82,9 @@ input.email{
     line-height: 50px;
     background-color:#D9D9D9;
     border-radius: 5px;
-    margin-top: 226px;
+    margin-top: 430px;
     font-weight: 700;
     font-size: 18px;
-}
-
-/* 테블릿 */
-@media screen and (min-width:768px) {
-    
+    border: none;
 }
 

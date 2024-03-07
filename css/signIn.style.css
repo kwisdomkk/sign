@@ -69,6 +69,7 @@ input::placeholder{text-indent:50px}
   margin-top: 10px;
   font-weight: 700;
   font-size: 18px;
+  border: none;
 }
 .find-button{
   width: 235px;
