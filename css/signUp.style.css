@@ -82,7 +82,8 @@ input.email{
     line-height: 50px;
     background-color:#D9D9D9;
     border-radius: 5px;
-    margin-top: 430px;
+    bottom: 30px;
+    position: fixed;
     font-weight: 700;
     font-size: 18px;
     border: none;
