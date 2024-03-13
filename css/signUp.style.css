@@ -3,16 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+.wrap{
+  max-width: 500px;
+  margin: 0 auto;
+}
 header{
   font-weight: 700; 
-  font-size: 16px;
+  font-size: 25px;
   max-width: 500px;
   margin: 15px auto;
   padding-left: 10px;
 }
 .sign-up{width: 100%;}
 .sign-up h1{
-  margin-top: 64px;
+  margin-top: 67px;
   text-align: center;
   font-weight: 700;
   font-size: 36px;
@@ -42,7 +46,7 @@ background-color:rgba(233,232,236,0.2);
 .id-box:focus-within .icon i {
   color: #000;
 }
-.email-box{
+.name-box{
 display: flex;
 width: 90%;
 max-width: 500px;
@@ -51,14 +55,14 @@ border-radius: 0 0 5px 5px;
 border:1px solid #000 ;
 background-color:rgba(233,232,236,0.2)
 }
-.email-box:focus-within{
+.name-box:focus-within{
   border-width:1px 1px 1px 1px;
   outline: 1px solid #000;
 }
-.email-box:focus-within .icon i{
+.name-box:focus-within .icon i{
   color: #000;
 }
-.password-box,.name-box{
+.password-box,.password-box2,.email-box{
   display: flex;
   width: 90%;
   max-width: 500px;
@@ -75,11 +79,18 @@ background-color:rgba(233,232,236,0.2)
 .password-box:focus-within .icon i{
   color: #000;
 }
-.name-box:focus-within{
+.password-box2:focus-within{
+  border-width:1px 1px 1px 1px;
+  outline: 1px solid #000;
+}
+.password-box2:focus-within .icon i{
+  color: #000;
+}
+.email-box:focus-within{
   border-width:1px 1px 1px 1px;
   outline: 1px solid black;
 }
-.name-box:focus-within .icon i{
+.email-box:focus-within .icon i{
   color: #000;
 }
 .check-button {
@@ -114,7 +125,7 @@ input.email{
   border:none;
   background-color:rgba(233,232,236,0.2);
 }
-.password,.name{
+.password,.password2,.name{
   width: 100%;
   max-width: 500px;
   height:50px;
@@ -136,4 +147,8 @@ input.email{
   font-size: 18px;
   border: none;
 }
-
+@media screen and (min-width:768px) {
+  .sign-up h1{
+    margin-top: 167px;
+  }
+}
