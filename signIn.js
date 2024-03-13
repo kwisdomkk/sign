@@ -6,17 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
   const pwError = document.querySelector(".pw_error");
 
   signInForm.addEventListener("submit", function(event) {
-    event.preventDefault(); // 폼 기본 동작 방지
+    event.preventDefault();
 
-    // 아이디 또는 비밀번호가 입력되지 않았을 경우
-    if (idInput.value.trim() === "") {
+    if (idInput.value === "") {
       idError.style.display = "block";
       idInput.focus();
     } else {
       idError.style.display = "none";
     }
 
-    if (passwordInput.value.trim() === "") {
+    if (passwordInput.value === "") {
       pwError.style.display = "block";
       passwordInput.focus();
     } else {
