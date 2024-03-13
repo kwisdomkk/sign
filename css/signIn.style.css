@@ -205,13 +205,22 @@ input:focus {outline:none;}
 .social{
   display: none;
 }
+.id_error,.pw_error {
+  display: none;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: red;
+  font-size: 10px;
+}
+
+
 /* 태블릿 */
 @media screen and (min-width:768px) {
   i{
     font-size: 28px;
   }
   .login{
-    padding-top: 200px;
+    padding-top: 150px;
   }
   .social{
   display: flex;
