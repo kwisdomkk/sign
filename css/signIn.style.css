@@ -205,7 +205,7 @@ input:focus {outline:none;}
 .social{
   display: none;
 }
-.id_error,.pw_error {
+.id-error,.pw-error {
   display: none;
   margin-left: 30px;
   margin-top: 10px;

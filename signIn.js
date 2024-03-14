@@ -10,9 +10,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if(idInput.value===""){
       idError.style.display="block";
-    } if(idInput.value !== ""&&passwordInput.value===""){
+    } else if(idInput.value !== ""&&passwordInput.value===""){
       idError.style.display="none";
       pwError.style.display="block";
+    } else {
+      idError.style.display="none";
+      pwError.style.display="none";
     }
   });
 });
