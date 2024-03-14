@@ -21,10 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
       unmatchPwError.style.display = "block";
       password2Box.classList.add("error")
       password2Input.classList.add("error-color")
-      password2Input.focus();
     } else {
       unmatchPwError.style.display = "none";
-      password2Input.classList.remove('error');
     }
 
     if (idInput.value === "") {
@@ -47,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
       password2Box.classList.add("error");
       password2Input.classList.add("error-color")
     }
+
     if (emailInput.value === "") {
       userMailError.style.display = "block";
       emailBox.classList.add("error");
@@ -64,4 +63,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   });
+});
+
+password2Input.addEventListener("input", function() {
+  if (passwordInput.value === password2Input.value) {
+      unmatchPwError.style.display = "none";
+      password2Box.classList.remove("error");
+      password2Input.classList.remove("error-color");
+  }
 });
