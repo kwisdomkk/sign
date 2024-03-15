@@ -15,12 +15,20 @@ document.addEventListener("DOMContentLoaded", function() {
   const unmatchPwError = document.querySelector(".unmatch-pw");
   const userMailError = document.querySelector(".usermail-error");
   const userNickError = document.querySelector(".usernick-error");
+  const userIcon = document.querySelector(" .fa-user");
+  const pwIcon=document.querySelector(".fa-lock");
+  const emailIcon=document.querySelector(".fa-envelope");
+  const icon=document.querySelectorAll("i");
+  console.log(icon)
+
   signUpForm.addEventListener("submit", function(event) {
     event.preventDefault(); 
     if (passwordInput.value !== password2Input.value) {
       unmatchPwError.style.display = "block";
       password2Box.classList.add("error")
       password2Input.classList.add("error-color")
+      pwIcon.classList.add("error-color")
+
     } else {
       unmatchPwError.style.display = "none";
     }
@@ -28,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (idInput.value === "") {
       userIdError.style.display = "block";
       idInputBox.classList.add("error");
-      idInput.classList.add("error-color")
+      idInput.classList.add("error-color");
+      userIcon.classList.add("error-color");
     } else {
       userIdError.style.display = "none";
     }
@@ -37,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
       userPwError.style.display = "block";
       passwordBox.classList.add("error");
       passwordInput.classList.add("error-color")
+      pwIcon.classList.add("error-color")
     } else {
       userPwError.style.display = "none";
     }
@@ -44,12 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
     if (password2Input.value === "") {
       password2Box.classList.add("error");
       password2Input.classList.add("error-color")
+      pwIcon.classList.add("error-color")
     }
 
     if (emailInput.value === "") {
       userMailError.style.display = "block";
       emailBox.classList.add("error");
       emailInput.classList.add("error-color")
+      emailIcon.classList.add("error-color");
     } else {
       userMailError.style.display = "none";
     }
@@ -58,17 +70,10 @@ document.addEventListener("DOMContentLoaded", function() {
       userNickError.style.display = "block";
       nameBox.classList.add("error");
       nameInput.classList.add("error-color")
+      userIcon.classList.add("error-color");
     } else {
       userNickError.style.display = "none";
     }
 
   });
-});
-
-password2Input.addEventListener("input", function() {
-  if (passwordInput.value === password2Input.value) {
-      unmatchPwError.style.display = "none";
-      password2Box.classList.remove("error");
-      password2Input.classList.remove("error-color");
-  }
 });
